@@ -47,3 +47,109 @@
     @apply bg-gray-100;
   }
 }
+
+/* Entrance Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Attention Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/* Text Animations */
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes colorShift {
+  0% { color: #3b82f6; }
+  50% { color: #8b5cf6; }
+  100% { color: #3b82f6; }
+}
+
+/* Background Animations */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Utility Classes */
+.animate-fadeIn { animation: fadeIn 1s ease forwards; }
+.animate-slideInLeft { animation: slideInLeft 1s ease forwards; }
+.animate-slideInRight { animation: slideInRight 1s ease forwards; }
+.animate-slideInUp { animation: slideInUp 1s ease forwards; }
+.animate-zoomIn { animation: zoomIn 1s ease forwards; }
+.animate-pulse { animation: pulse 2s infinite; }
+.animate-bounce { animation: bounce 2s infinite; }
+.animate-shake { animation: shake 0.5s; }
+.animate-typewriter { 
+  animation: typewriter 2s steps(40) 1s forwards;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  border-right: 3px solid;
+  animation: typewriter 2s steps(40) 1s forwards, blink 0.5s step-end infinite alternate;
+}
+.animate-colorShift { animation: colorShift 3s infinite; }
+.animate-gradientShift { 
+  background: linear-gradient(270deg, #3b82f6, #8b5cf6, #ec4899);
+  background-size: 600% 600%;
+  animation: gradientShift 6s ease infinite;
+}
+
+/* Animation Delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-1000 { animation-delay: 1s; }
+
+/* Animation Durations */
+.duration-300 { animation-duration: 0.3s; }
+.duration-500 { animation-duration: 0.5s; }
+.duration-700 { animation-duration: 0.7s; }
+.duration-1000 { animation-duration: 1s; }
+.duration-2000 { animation-duration: 2s; }

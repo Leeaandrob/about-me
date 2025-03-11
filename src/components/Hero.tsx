@@ -9,13 +9,19 @@ const Hero = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
-          <div className="w-64 h-64 mx-auto md:mx-0 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl">
+          <motion.div 
+            className="w-64 h-64 mx-auto md:mx-0 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 3, repeat: Infinity, repeatType: "loop" }}
+          >
             {/* Profile image placeholder - replace with actual image */}
             <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-4xl font-bold">
               LB
             </div>
-          </div>
+          </motion.div>
         </motion.div>
         
         <motion.div 
@@ -23,19 +29,41 @@ const Hero = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+          <motion.h1 
+            className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
             Leandro Barbosa
-          </h1>
-          <h2 className="text-2xl text-blue-600 dark:text-blue-400 mb-6">
+          </motion.h1>
+          <motion.h2 
+            className="text-2xl text-blue-600 dark:text-blue-400 mb-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
             Lead Software Engineer
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg">
+          </motion.h2>
+          <motion.p 
+            className="text-gray-600 dark:text-gray-300 mb-6 text-lg"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
             Software engineer with extensive experience in diverse projects and fields.
             Specialized in Python, JavaScript, Ruby, Nodejs, Golang, and Elixir.
             Proficient with frameworks like Django, Flask, Nestjs, Gin, Vuejs, Phoenix, and React.
-          </p>
-          <div className="flex flex-wrap gap-3">
+          </motion.p>
+          <motion.div 
+            className="flex flex-wrap gap-3"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
             <a 
               href="https://github.com/Leeaandrob" 
               target="_blank" 
@@ -50,7 +78,7 @@ const Hero = () => {
             >
               Contact Me
             </a>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

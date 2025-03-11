@@ -1,0 +1,14 @@
+name = "about-me"
+type = "javascript"
+
+[site]
+bucket = "./dist"
+entry-point = "./"
+
+[build]
+command = "npm run build"
+
+[env.production]
+account_id = "your-account-id"
+project_name = "about-me"
+zone_id = "your-zone-id"
