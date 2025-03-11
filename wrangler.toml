@@ -1,4 +1,5 @@
 name = "about-me"
+compatibility_date = "2025-03-11"
 
 [site]
 bucket = "./dist"

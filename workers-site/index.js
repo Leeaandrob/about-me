@@ -1,3 +1,4 @@
+import { getAssetFromKV } from '@cloudflare/kv-asset-handler';
 // Cloudflare Worker script to serve static content from the dist directory
 
 addEventListener('fetch', event => {
