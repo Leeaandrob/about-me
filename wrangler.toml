@@ -8,7 +8,7 @@ bucket = "./dist"
 command = "npm run build"
 
 [env.production]
-account_id = "your-account-id"
+account_id = "seu-account-id-aqui"
 project_name = "about-me"
 main = "workers-site/index.js"
-zone_id = "your-zone-id"
+zone_id = "seu-zone-id-aqui"
