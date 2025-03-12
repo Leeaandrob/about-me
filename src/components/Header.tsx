@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-const Header = () => {
+const Header = ({ toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -37,7 +37,13 @@ const Header = () => {
           Leandro Barbosa
         </motion.div>
         
-        <nav>
+        <button
+          onClick={toggleTheme}
+          className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
+        >
+          Toggle Theme
+        </button>
+        <nav className="ml-4">
           <ul className="flex space-x-6">
             {['About', 'Experience', 'Skills', 'Certifications', 'Education'].map((item, index) => (
               <motion.li
