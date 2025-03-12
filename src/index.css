@@ -22,6 +22,11 @@
     @apply m-0 min-h-screen;
   }
 
+  :focus {
+    outline: 2px dashed #3b82f6;
+    outline-offset: 4px;
+  }
+
   h1 {
     @apply text-4xl leading-tight;
   }
